@@ -22,4 +22,4 @@ Log ingestion is the process of collecting logs from endpoints and sending them 
 
 ## Key Insight
 
-The SIEM cannot detect threats without log ingestion. This step is critical for enabling visibility into endpoint behavior.
+The SIEM cannot detect threats without log ingestion - registering agents enable visibility into endpoint behavior.
