@@ -26,13 +26,7 @@ This lab simulates a basic Security Operations Center (SOC) environment using Wa
 
 ## Data Flow
 
-Endpoint (Windows PC)
-        ↓ logs
-Wazuh Agent
-        ↓
-Wazuh Server (SIEM)
-        ↓
-Wazuh Dashboard (Analysis)
+Endpoint (Windows PC) -> logs -> Wazuh Agent -> Wazuh Server (SIEM) -> Wazuh Dashboard
 
 ## Key Concept
 
