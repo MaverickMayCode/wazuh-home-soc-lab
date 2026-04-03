@@ -1,7 +1,7 @@
-# Incident Report: Brute Force Detection
+# Incident Report 1: Failed Authentication Attempts
 
 ## Summary
-Simulated multiple failed login attempts on a Windows endpoint to test SIEM detection capabilities.
+Simulated multiple failed login attempts on a Windows endpoint to test SIEM detection.
 
 ## Observations
 
