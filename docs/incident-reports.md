@@ -1,4 +1,4 @@
-# Incident Report 1: Failed Authentication Attempts
+# Simulation 1: Failed Authentication Attempts
 
 ## Summary
 Simulated multiple failed login attempts on a Windows endpoint to test SIEM detection.
