@@ -1,4 +1,5 @@
 # Event Simulations
+See "incident-reports.md" for reports.
 
 ## Objective
 Simulate security events to test SIEM detection capabilities.
