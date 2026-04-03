@@ -4,7 +4,7 @@ See "incident-reports.md" for reports.
 ## Objective
 Simulate security events to test SIEM detection capabilities.
 
-## Simulation 1: Failed Authentication Attempts
+## Simulation 1: Failed Authentication Attempts - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
 ### Command Used: net use \127.0.0.1\fake /user:fakeuser wrongpassword
 
