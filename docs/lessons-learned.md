@@ -20,6 +20,5 @@
 ## Personal Growth
 
 - Gained hands-on experience with SIEM deployment
-- Developed understanding of SOC workflows
 - Learned how to simulate and detect malicious behavior
 - Started learning the basics of navigating and effectively utilizing the Wazuh interace
