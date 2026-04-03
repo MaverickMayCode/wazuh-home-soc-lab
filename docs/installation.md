@@ -1,3 +1,10 @@
-# Wazuh Installation Guide
+# Installation Process
 
-This document will walk through the deployment of the Wazuh SIEM server and agent configuration.
+## Step 1: Environment Setup
+- Installed Oracle VirtualBox
+- Allocated 8GB RAM, 4 CPU cores, and 60GB storage for Wazuh server VM
+- Installed Ubuntu Server 22.04
+
+## Step 2: System Preparation
+
+Updated system:
