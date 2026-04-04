@@ -57,18 +57,18 @@ The SIEM identified a user account and it's process of being created.
 
 ## Conclusion
 
-Wazuh successfully detected the user account creation process from the Windows endpoint. Logs like these are crucial in detecting malicious activity and further privledge escalation down the line and are important as a "first line of defence" for proactive cybersecurity practices.
+Wazuh successfully detected the user account creation process from the Windows endpoint. Logs like these are crucial in detecting malicious activity and further privilege escalation down the line and are important as a "first line of defence" for proactive cybersecurity practices.
 
-# Simulation 3: Successful Privledge Escalation
+# Simulation 3: Successful privilege Escalation
 
 ## Summary
-Executed successful privledge escalation commands on a Windows endpoint to test SIEM detection.
+Executed successful privilege escalation commands on a Windows endpoint to test SIEM detection.
 
 ## Observations
 
 - A single log detailing: Administrators group changed. | ID: 60154 | Level: 12 | MITRE Technique: T1484
 - A new high score! Our highest leveled threat yet.
-- Wazuh dashboard updated to mark "1 - Level 12 or above alerts" signifying the potenial security hazards an incident like this can bring
+- Wazuh dashboard updated to mark "1 - Level 12 or above alerts" signifying the potential security hazards an incident like this can bring
 
 ## Timeline
 
@@ -76,8 +76,8 @@ Executed successful privledge escalation commands on a Windows endpoint to test 
 
 ## Analysis
 
-The SIEM identified a user account escalating its privledges to admin.
+The SIEM identified a user account escalating its privileges to admin.
 
 ## Conclusion
 
-Wazuh successfully detected the priveledge escalation from the Windows endpoint. These logs are so important and are leveled so high because of the potential damage a malicious threat can do with escalated privledges.
+Wazuh successfully detected the priveledge escalation from the Windows endpoint. These logs are so important and are leveled so high because of the potential damage a malicious threat can do with escalated privileges.
