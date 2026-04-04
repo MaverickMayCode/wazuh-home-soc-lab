@@ -53,11 +53,11 @@ Add to admin group: net localgroup administrators testuser /add
 
 ## Outcome
 
+- Wazuh generated alerts for:
+  - Successful privilege escalation activity
+
 ## Simulation 4 (WIP): Can you guess it?
 <img width="1100" height="697" alt="ab8fe2eb-1d69-430c-96db-f06157489c85" src="https://github.com/user-attachments/assets/a1dbb793-a3ec-477a-b55a-9aab2acaf483" />
 
 
-
-- Wazuh generated alerts for:
-  - Successful privilege escalation activity
 
