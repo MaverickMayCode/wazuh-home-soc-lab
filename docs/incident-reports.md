@@ -89,7 +89,7 @@ Used my Kali ATTACKER VM to run a basic Nmap scan of a Windows endpoint to test 
 
 ## Observations
 
-- Wazuh did not detect the scan and create logs for the event
+- Our endpoint did not generate logs for the event - likely due to some OS, like our Windows 10 endpoint, not generating logs for such attacks - therefore there were no events to see in Wazuh
   - The scan was able to gather critical information for the ATTACKER such as which ports were open on our endpoint
 
 ## Timeline
@@ -100,10 +100,10 @@ Used my Kali ATTACKER VM to run a basic Nmap scan of a Windows endpoint to test 
 
 ## Analysis
 
-The SIEM did not identify the event which shows the importance of closely monitoring port access.
+The SIEM did not identify the event which shows the importance of closely monitoring port access especially for endpoints that don't generate logs for such attacks.
 - Potential bad actors could use these open ports to attack the network and/or gain unrestricted access if not carefully monitored
 
 ## Conclusion
 
-Basic low-level Nmap scans can be used by bad actors to gain insight into the network while remaining undetected by a Wazuh SIEM. This shows the importance of taking pro-active steps to ensure port access is limited to the correct channels and closely monitored to ensure maximum security.
+Basic low-level Nmap scans can be used by bad actors to gain insight into the network while remaining undetected by an endpoint and therefore also undetected to the Wazuh SIEM. This shows the importance of taking pro-active steps to ensure port access is limited to the correct channels and closely monitored to ensure maximum security.
 
