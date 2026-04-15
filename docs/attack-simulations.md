@@ -74,7 +74,7 @@ Nmap Scan from Kali ATTACKER: nmap -sS 192.168.4.22
 - Wazuh generated alerts for:
   - None of the processes executed by the Kali ATTACKER during the Nmap scan showing the gap in log generation certain endpoint operating systems can have - like our Windows endpoint
 - ATTACKER gained:
-  - Insight into the vunerable ports available to possibly attack on our Windows endpoint
+  - Insight into the vunerable ports on our Windows endpoint
 
 
 
