@@ -85,13 +85,19 @@ Network Login attempt from Kali ATTACKER: smbclient -L //192.168.4.22 -U fakeuse
 
 ### Description
 
-- ...
+- Kali ATTACKER used the command listed to attempt to log in to the SMB service on our windows endpoint
+
+### Single Attempt
 
 <img width="703" height="547" alt="firstkali" src="https://github.com/user-attachments/assets/7ab2b0b4-37d3-4ad6-86dc-42a5b4f5c27f" />
 <img width="1874" height="169" alt="firstalert" src="https://github.com/user-attachments/assets/8cb43a22-919d-4a52-9a38-fef8dc953b90" />
 
+### Multiple Attempts
+
 <img width="778" height="619" alt="multikali" src="https://github.com/user-attachments/assets/f377ad99-b654-436b-b863-db1e30179666" />
 <img width="1880" height="546" alt="88f9e44a-cb22-41fa-ab28-187e4159a449" src="https://github.com/user-attachments/assets/66bad29f-c119-4716-8658-4e1908c7c2b8" />
+
+### Issue Becomes Escalated
 
 <img width="1857" height="61" alt="esca" src="https://github.com/user-attachments/assets/00237f40-d760-4a74-8203-69b949259309" />
 <img width="1875" height="897" alt="esca1" src="https://github.com/user-attachments/assets/d837dee0-2612-4711-a740-da35c8f3c54a" />
