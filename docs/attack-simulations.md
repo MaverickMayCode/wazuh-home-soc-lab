@@ -1,5 +1,5 @@
 # Event Simulations
-See "incident-reports.md" for reports.
+See ["incident-reports.md"](https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md) for incident reports.
 
 ## 🔑 Simulation Index
 
