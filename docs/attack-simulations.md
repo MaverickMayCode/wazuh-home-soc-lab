@@ -6,7 +6,7 @@ See ["incident-reports.md"](https://github.com/MaverickMayCode/wazuh-home-soc-la
 - [Simulation 1: Failed Authentication Attempts](#simulation-1-failed-authentication-attempts)
 - [Simulation 2: Successful Account Creation](#simulation-2-successful-account-creation)
 - [Simulation 3: Successful Privilege Escalation](#simulation-3-successful-privilege-escalation)
-- [Simulation 4: Basic Low-Level Nmap Scan - Kali ATTACKER](#simulation-4-basic-low-level-nmap-scan---kali-attacker)
+- [Simulation 4: Baisc Low-Level Nmap Scan - Kali ATTACKER](#simulation-4-basic-low-level-nmap-scan---kali-attacker)
 - [Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER](#simulation-5-network-login-attempt-smb---kali-attacker)
 
 ## Objective
