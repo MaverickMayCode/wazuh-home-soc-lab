@@ -12,7 +12,7 @@ See ["incident-reports.md"](https://github.com/MaverickMayCode/wazuh-home-soc-la
 ## Objective
 Simulate security events to test SIEM detection capabilities.
 
-## Simulation 1: Failed Authentication Attempts
+## 💻 Simulation 1: Failed Authentication Attempts
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
 ### Command Used: net use \127.0.0.1\fake /user:fakeuser wrongpassword
@@ -25,7 +25,7 @@ Simulate security events to test SIEM detection capabilities.
 <img width="974" height="504" alt="70645b3c-3f2f-44a6-a3af-b1076873f5f5" src="https://github.com/user-attachments/assets/20d60959-f692-4569-91f7-f51de71192f9" />
 <img width="1870" height="924" alt="04055a2a-553b-4248-97db-48d2f8747eb9" src="https://github.com/user-attachments/assets/4ed352e2-962b-41b7-9e55-0ea8fdc01d5f" />
 
-## Simulation 2: Successful Account Creation
+## 💻 Simulation 2: Successful Account Creation
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
 ### Commands Used
@@ -44,7 +44,7 @@ Create user: net user testuser Password123! /add
 - Wazuh generated alerts for:
   - Account creation
 
-## Simulation 3: Successful Privilege Escalation
+## 💻 Simulation 3: Successful Privilege Escalation
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
 ### Commands Used
@@ -64,7 +64,7 @@ Add to admin group: net localgroup administrators testuser /add
 - Wazuh generated alerts for:
   - Successful privilege escalation activity
 
-## Simulation 4: Baisc Low-Level Nmap Scan - Kali ATTACKER
+## 💻 Simulation 4: Baisc Low-Level Nmap Scan - Kali ATTACKER
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
 ### Commands Used
@@ -84,7 +84,7 @@ Nmap Scan from Kali ATTACKER: nmap -sS 192.168.4.22
 - ATTACKER gained:
   - Insight into the vunerable ports on our Windows endpoint
  
-## Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER
+## 💻 Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
 ### Commands Used
