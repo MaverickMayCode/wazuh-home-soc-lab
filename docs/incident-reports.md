@@ -107,3 +107,36 @@ The SIEM did not identify the event which shows the importance of closely monito
 
 Basic low-level Nmap scans can be used by bad actors to gain insight into the network while remaining undetected by an endpoint and therefore also undetected to the Wazuh SIEM. This shows the importance of taking pro-active steps to ensure port access is limited to the correct channels and closely monitored to ensure maximum security.
 
+# Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER
+
+## Summary
+Simulated multiple failed login attempts from our Kali ATTACKER to our Windows endpoint SMB service to test SIEM detection.
+
+## Observations
+
+- Multiple "logon failure" events detected
+- Wazuh escalated alert severity after repeated login attempts from our Kali ATTACKER
+  - Alerts escalated from "Logon failure - Unknown user or bad password." with a score of 5 to: "Multiple Windows logon failures." with a score of 10
+
+## Key Alert - where the issue became escalated
+
+Rule ID: 60204  
+Level: 10  
+Description: Multiple Windows logon failures  
+MITRE Technique: T1110 (Brute Force)
+
+## Timeline
+
+- Initial failed login attempt
+- Wazuh generated a security alert associated with the attempt
+- Repeated attempts generated alerts and also triggered a correlation rule 
+- High severity alert generated due to Multiple Windows logon failures
+
+## Analysis
+
+The SIEM identified a pattern of repeated failed authentication attempts into our Windows endpoint SMB service, indicating potential brute-force activity.
+
+## Conclusion
+
+Wazuh successfully detected and escalated suspicious authentication behavior demonstrating log correlation and threat detection. Wazuh even identified the username our Kali ATTACKER was using in attempts to gain access. Information from the alerts helps narrow down who may be attempting to log in. For instance, if the organization had deployed honey tokens to catch potential malicious threats and noticed an ATTACKER trying to login using those credentials, it would be an easy way for the security team to know a malicious ATTACKER had gained access to the network and was trying to further access using the honey tokens.
+
