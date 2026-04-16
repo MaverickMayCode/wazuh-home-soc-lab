@@ -41,11 +41,11 @@ Create user: net user testuser Password123! /add
 
 - Simulates successful authorized account creation
 
-## Test
+## Account Creation
 
 <img width="855" height="169" alt="561cf6ed-2bf5-4c06-9c13-1c7f867e6bc9" src="https://github.com/user-attachments/assets/aaf08687-1adf-42d8-bf45-60c01a274690" />
 
-## Test
+## Alert Generated in Wazuh
 
 <img width="1859" height="369" alt="0975720f-5449-4d6b-854b-3640bf6e774a" src="https://github.com/user-attachments/assets/7bdcb7b6-72d2-4795-b7bf-4f3cc291bf4d" />
 
@@ -65,8 +65,16 @@ Add to admin group: net localgroup administrators testuser /add
 
 - Simulates successful privilege escalation
 
+## Test
+
 <img width="857" height="220" alt="3f97d454-4c0e-4b04-85e4-d621cff7525c" src="https://github.com/user-attachments/assets/bb19a822-3abb-4692-9716-337f8d487a29" />
+
+## Test
+
 <img width="1860" height="67" alt="39baac69-e4a1-4bae-b8c4-3d582ab1191c" src="https://github.com/user-attachments/assets/22c9370a-6099-4686-90db-27e418be13e3" />
+
+## Test
+
 <img width="1778" height="857" alt="b8349931-deb4-47d0-9120-0d0588f48691" src="https://github.com/user-attachments/assets/66e238c6-bdf0-4904-b102-51ed265b768d" />
 
 ## Outcome
