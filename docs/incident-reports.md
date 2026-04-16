@@ -1,3 +1,15 @@
+# Incident Reports
+
+## 🔑 Incident Report Index
+
+- [Simulation 1: Failed Authentication Attempts](#simulation-1-failed-authentication-attempts)
+- [Simulation 2: Successful User Creation](#simulation-2-successful-user-creation)
+- [Simulation 3: Successful Privilege Escalation](#simulation-3-successful-privilege-escalation)
+- [Simulation 4: Basic Low-Level Nmap Scan - Kali ATTACKER](#simulation-4-basic-low-level-nmap-scan---kali-attacker)
+- [Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER](#simulation-5-network-login-attempt-smb---kali-attacker)
+
+---
+
 # Simulation 1: Failed Authentication Attempts
 
 ## Summary
@@ -5,9 +17,9 @@ Simulated multiple failed login attempts on a Windows endpoint to test SIEM dete
 
 ## Observations
 
-- Multiple "logon failure" events detected
-- Wazuh escalated alert severity after repeated attempts
-  - Alerts escalated from "Logon failure - Unknown user or bad password." with a score of 5 to: "Multiple Windows logon failures." with a score of 10
+- Multiple "logon failure" events detected  
+- Wazuh escalated alert severity after repeated attempts  
+  - Alerts escalated from "Logon failure - Unknown user or bad password." (Level 5) to "Multiple Windows logon failures." (Level 10)
 
 ## Key Alert - where the issue became escalated
 
@@ -18,105 +30,116 @@ MITRE Technique: T1110 (Brute Force)
 
 ## Timeline
 
-- Initial failed login attempts recorded
-- Repeated attempts triggered correlation rule 
-- High severity alert generated - Multiple Windows logon failures
+- Initial failed login attempts recorded  
+- Repeated attempts triggered a correlation rule  
+- High severity alert generated - Multiple Windows logon failures  
 
 ## Analysis
 
-Wazuh identified a pattern of repeated failed authentication attempts, indicating potential brute-force activity.
+Wazuh identified a clear pattern of repeated failed authentication attempts, indicating potential brute-force activity.
 
 ## Conclusion
 
-Wazuh successfully detected and escalated suspicious authentication behavior demonstrating log correlation and threat detection.
+Wazuh successfully detected and escalated suspicious authentication behavior, showing strong log correlation and threat detection capabilities.
+
+---
 
 # Simulation 2: Successful User Creation
 
 ## Summary
-Ran successful user creation commands being executed on a Windows endpoint to test SIEM detection.
+Executed user creation commands on a Windows endpoint to test SIEM detection.
 
 ## Observations
 
-- Multiple logs detailing the command run including
-  - Domain users group changed. | ID: 60160 | Level: 5
-  - User account enabled or created. | ID: 60109 | Level: 8
-  - User account changed. | ID: 60110 | Level: 8
-  - Users group changed. | ID: 60170 | Level: 5
+- Multiple logs detailing the command execution, including:
+  - Domain users group changed | ID: 60160 | Level: 5  
+  - User account enabled or created | ID: 60109 | Level: 8  
+  - User account changed | ID: 60110 | Level: 8  
+  - Users group changed | ID: 60170 | Level: 5  
 
 ## Timeline
 
-- Initial user creation with no group assigned
-- User account assigned to account name: testuser 
-- testuser was assigned a list of attributes
-- testuser was assigned a "Password Last Set" time in attributes
-- testuser added to group name: Users
+- Initial user creation with no group assigned  
+- User account created under the name: testuser  
+- testuser was assigned attributes, including a "Password Last Set" timestamp  
+- testuser added to the "Users" group  
 
 ## Analysis
 
-Wazuh identified a user account and it's process of being created.
+Wazuh tracked the full lifecycle of the account creation process, including attribute assignment and group membership.
 
 ## Conclusion
 
-Wazuh successfully detected the user account creation process from the Windows endpoint. Logs like these are crucial in detecting malicious activity and further privilege escalation down the line and are important as a "first line of defence" for proactive cybersecurity practices.
+Wazuh successfully detected the user account creation process on the Windows endpoint. Logs like these are important for identifying suspicious activity and catching potential privilege escalation early. They act as a strong first line of defense.
 
-# Simulation 3: Successful privilege Escalation
+---
+
+# Simulation 3: Successful Privilege Escalation
 
 ## Summary
-Executed successful privilege escalation commands on a Windows endpoint to test SIEM detection.
+Executed privilege escalation commands on a Windows endpoint to test SIEM detection.
 
 ## Observations
 
-- A single log detailing: Administrators group changed. | ID: 60154 | Level: 12 | MITRE Technique: T1484
-- A new high score! Our highest leveled threat yet
-- Wazuh dashboard updated to mark "1 - Level 12 or above alerts" signifying the potential security hazards an incident like this can bring
+- A single high-level alert detected:
+  - Administrators group changed | ID: 60154 | Level: 12 | MITRE Technique: T1484  
+- Highest severity alert observed so far  
+- Wazuh dashboard reflected "Level 12 or above" alerts, highlighting the risk of this action  
 
 ## Timeline
 
-- A member (our user) was added to Group Name: Administrators with success
+- User (testuser) successfully added to the "Administrators" group  
 
 ## Analysis
 
-Wazuh identified a user account escalating its privileges to admin.
+Wazuh identified a user account escalating its privileges to an administrative level.
 
 ## Conclusion
 
-Wazuh successfully detected the priveledge escalation from the Windows endpoint. These logs are so important and are leveled so high because of the potential damage a malicious threat can do with escalated privileges.
+Wazuh successfully detected the privilege escalation event on the Windows endpoint. Alerts at this level are critical due to the level of access gained. If this were a real attack, the damage potential would be significantly higher once admin privileges are obtained.
 
-# Simulation 4: Baisc Low-Level Nmap Scan - Kali ATTACKER
+---
+
+# Simulation 4: Basic Low-Level Nmap Scan - Kali ATTACKER
 
 ## Summary
-Used my Kali ATTACKER VM to run a basic Nmap scan of a Windows endpoint to test SIEM detection.
+Used my Kali ATTACKER VM to run a basic Nmap scan against a Windows endpoint to test SIEM detection.
 
 ## Observations
 
-- Our endpoint did not generate logs for the event - likely due to some OS, like our Windows 10 endpoint, not generating logs for such attacks - therefore there were no events to see in Wazuh
-  - The scan was able to gather critical information for the ATTACKER such as which ports were open on our endpoint
+- The endpoint did not generate logs for this activity  
+- As a result, no relevant events were visible in Wazuh  
+- The scan still successfully gathered useful information for the attacker, including open ports on the endpoint  
 
 ## Timeline
 
-- Ran the scan from my Kali ATTACKER VM
-- Monitored Wazuh to view if logs were created
-- Noticed no logs created for the event 
+- Ran the scan from the Kali ATTACKER VM  
+- Monitored Wazuh for generated logs  
+- No logs were created for this activity  
 
 ## Analysis
 
-Wazuh did not identify the event which shows the importance of closely monitoring port access especially for endpoints that don't generate logs for such attacks.
-- Potential bad actors could use these open ports to attack the network and/or gain unrestricted access if not carefully monitored
+Wazuh did not detect this event because it relies on endpoint-generated logs. Since the Windows endpoint did not log this type of network activity, the SIEM had no visibility into the scan.
+
+- This highlights a detection gap in endpoint-based monitoring  
+- Attackers can gather valuable reconnaissance data without triggering alerts  
 
 ## Conclusion
 
-Basic low-level Nmap scans can be used by bad actors to gain insight into the network while remaining undetected by an endpoint and therefore also undetected to the Wazuh SIEM. This shows the importance of taking pro-active steps to ensure port access is limited to the correct channels and closely monitored to ensure maximum security.
+Basic Nmap scans can allow attackers to gather insight into a system while remaining undetected by endpoint-based logging systems. This reinforces the importance of layered security, where network monitoring tools (IDS/IPS) are used alongside SIEM solutions to improve visibility.
+
+---
 
 # Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER
 
 ## Summary
-Simulated multiple failed login attempts from our Kali ATTACKER to our Windows endpoint SMB service to test SIEM detection.
+Simulated multiple failed login attempts from the Kali ATTACKER to the Windows endpoint’s SMB service to test SIEM detection.
 
 ## Observations
 
-- Multiple "logon failure" events detected
-- Wazuh escalated alert severity after repeated login attempts from our Kali ATTACKER
-  - Alerts escalated from "Logon failure - Unknown user or bad password." with a score of 5 to: "Multiple Windows logon failures." with a score of 10
+- Multiple "logon failure" events detected  
+- Wazuh escalated alert severity after repeated login attempts  
+  - Alerts escalated from "Logon failure - Unknown user or bad password." (Level 5) to "Multiple Windows logon failures." (Level 10)
 
 ## Key Alert - where the issue became escalated
 
@@ -127,16 +150,17 @@ MITRE Technique: T1110 (Brute Force)
 
 ## Timeline
 
-- Initial failed login attempt
-- Wazuh generated a security alert associated with the attempt
-- Repeated attempts generated alerts and also triggered a correlation rule 
-- High severity alert generated due to Multiple Windows logon failures
+- Initial failed login attempt  
+- Wazuh generated an alert tied to the attempt  
+- Repeated attempts triggered additional alerts and a correlation rule  
+- High severity alert generated due to multiple failed logon attempts  
 
 ## Analysis
 
-Wazuh identified a pattern of repeated failed authentication attempts into our Windows endpoint SMB service, indicating potential brute-force activity.
+Wazuh identified a pattern of repeated failed authentication attempts targeting the SMB service on the Windows endpoint, indicating potential brute-force activity.
 
 ## Conclusion
 
-Wazuh successfully detected and escalated suspicious authentication behavior demonstrating log correlation and threat detection. Wazuh even identified the username our Kali ATTACKER was using in attempts to gain access. Information from the alerts helps narrow down who may be attempting to log in. For instance, if the organization had deployed honey tokens to catch potential malicious threats and noticed an ATTACKER trying to login using those credentials, it would be an easy way for the security team to know a malicious ATTACKER had gained access to the network and was trying to further access using the honey tokens.
+Wazuh successfully detected and escalated suspicious authentication behavior, again showing strong log correlation. It also captured the username used during the attack attempts, which helps narrow down potential threat activity.
 
+This kind of visibility becomes even more useful when paired with strategies like honeytokens. If fake credentials were planted and an attacker attempted to use them, it would provide a high-confidence indicator of malicious activity, allowing security teams to quickly identify and respond to threats.
