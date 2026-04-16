@@ -2,15 +2,15 @@
 
 ## 🔑 Incident Report Index
 
-- [💻 Simulation 1: Failed Authentication Attempts](#-simulation-1-failed-authentication-attempts)
-- [💻 Simulation 2: Successful User Creation](#-simulation-2-successful-user-creation)
-- [💻 Simulation 3: Successful Privilege Escalation](#-simulation-3-successful-privilege-escalation)
-- [💻 Simulation 4: Basic Low-Level Nmap Scan - Kali ATTACKER](#-simulation-4-basic-low-level-nmap-scan---kali-attacker)
-- [💻 Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER](#-simulation-5-network-login-attempt-smb---kali-attacker)
+- [Simulation 1: Failed Authentication Attempts](#simulation-1-failed-authentication-attempts)
+- [Simulation 2: Successful User Creation](#simulation-2-successful-user-creation)
+- [Simulation 3: Successful Privilege Escalation](#simulation-3-successful-privilege-escalation)
+- [Simulation 4: Basic Low-Level Nmap Scan - Kali ATTACKER](#simulation-4-basic-low-level-nmap-scan---kali-attacker)
+- [Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER](#simulation-5-network-login-attempt-smb---kali-attacker)
 
 ---
 
-# 💻 Simulation 1: Failed Authentication Attempts
+# Simulation 1: Failed Authentication Attempts
 
 ## Summary
 Simulated multiple failed login attempts on a Windows endpoint to test SIEM detection.
@@ -44,7 +44,7 @@ Wazuh successfully detected and escalated suspicious authentication behavior, sh
 
 ---
 
-# 💻 Simulation 2: Successful User Creation
+# Simulation 2: Successful User Creation
 
 ## Summary
 Executed user creation commands on a Windows endpoint to test SIEM detection.
@@ -74,7 +74,7 @@ Wazuh successfully detected the user account creation process on the Windows end
 
 ---
 
-# 💻 Simulation 3: Successful Privilege Escalation
+# Simulation 3: Successful Privilege Escalation
 
 ## Summary
 Executed privilege escalation commands on a Windows endpoint to test SIEM detection.
@@ -100,7 +100,7 @@ Wazuh successfully detected the privilege escalation event on the Windows endpoi
 
 ---
 
-# 💻 Simulation 4: Basic Low-Level Nmap Scan - Kali ATTACKER
+# Simulation 4: Basic Low-Level Nmap Scan - Kali ATTACKER
 
 ## Summary
 Used my Kali ATTACKER VM to run a basic Nmap scan against a Windows endpoint to test SIEM detection.
@@ -130,7 +130,7 @@ Basic Nmap scans can allow attackers to gather insight into a system while remai
 
 ---
 
-# 💻 Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER
+# Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER
 
 ## Summary
 Simulated multiple failed login attempts from the Kali ATTACKER to the Windows endpoint’s SMB service to test SIEM detection.
