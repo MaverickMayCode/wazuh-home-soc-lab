@@ -173,10 +173,6 @@ Network Login attempt from Kali ATTACKER: smbclient -L //192.168.4.22 -U fakeuse
 ---
 ## 💻 Simulation 6: Nmap Scan - Kali ATTACKER - Suricata Added to Wazuh
 
-### Description
-
-- Ran a basic network scan that searches for exposed services/ports on a Windows endpoint
-
 Not all of our simulations on our Windows endpoint generated logs that Wazuh could
 use to alert us of potential malicious activity. The biggest gap I noticed was when
 running my first nmap scan. The nmap scan gained so much important data for an ATTACKER
