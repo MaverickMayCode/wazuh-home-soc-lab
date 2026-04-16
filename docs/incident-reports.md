@@ -164,3 +164,5 @@ Wazuh identified a pattern of repeated failed authentication attempts targeting 
 Wazuh successfully detected and escalated suspicious authentication behavior, again showing strong log correlation. It also captured the username used during the attack attempts, which helps narrow down potential threat activity.
 
 This kind of visibility becomes even more useful when paired with strategies like honeytokens. If fake credentials were planted and an attacker attempted to use them, it would provide a high-confidence indicator of malicious activity, allowing security teams to quickly identify and respond to threats.
+
+---
