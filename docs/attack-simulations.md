@@ -33,7 +33,9 @@ Simulate security events to test SIEM detection capabilities.
 ## Alerts Generated in Wazuh
 
 <img width="1870" height="924" alt="04055a2a-553b-4248-97db-48d2f8747eb9" src="https://github.com/user-attachments/assets/4ed352e2-962b-41b7-9e55-0ea8fdc01d5f" />
- 
+
+- Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
+
 ---
 
 ## 💻 Simulation 2: Successful Account Creation
@@ -59,6 +61,8 @@ Create user: net user testuser Password123! /add
 
 - Wazuh generated alerts for:
   - Account creation
+
+- Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
 ---
 
@@ -90,6 +94,8 @@ Add to admin group: net localgroup administrators testuser /add
 - Wazuh generated alerts for:
   - Successful privilege escalation activity
 
+- Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
+
 ---
 
 ## 💻 Simulation 4: Baisc Low-Level Nmap Scan - Kali ATTACKER
@@ -113,7 +119,9 @@ Nmap Scan from Kali ATTACKER: nmap -sS 192.168.4.22
   - None of the processes executed by the Kali ATTACKER during the Nmap scan showing the gap in log generation certain endpoint operating systems can have - like our Windows endpoint
 - ATTACKER gained:
   - Insight into the vunerable ports on our Windows endpoint
- 
+
+- Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
+
 ---
 
 ## 💻 Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER
@@ -160,6 +168,8 @@ Network Login attempt from Kali ATTACKER: smbclient -L //192.168.4.22 -U fakeuse
   - Identified that SMB (port 445) is active and responding
   - Determined the attempted username was invalid or incorrect
 
+- Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
+
 ---
 ## 💻 Simulation 6: Nmap Scan - Kali ATTACKER - Suricata Added to Wazuh
 
@@ -198,5 +208,7 @@ Started Suricata and added it's logs file to our Wazuh config.
 ## Alert Details in Wazuh - Continued
 
 <img width="960" height="932" alt="detail2" src="https://github.com/user-attachments/assets/05a78fc2-9f54-418a-b939-183d4e2ad942" />
+
+- Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
 ---
