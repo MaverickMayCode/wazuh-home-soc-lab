@@ -115,7 +115,7 @@ Network Login attempt from Kali ATTACKER: smbclient -L //192.168.4.22 -U fakeuse
 
 <img width="1857" height="61" alt="esca" src="https://github.com/user-attachments/assets/00237f40-d760-4a74-8203-69b949259309" />
 
-### Wazuh Escalates the Issue -  Log Details
+### Wazuh Escalates the Issue -  Alert Details
 
 <img width="1875" height="897" alt="esca1" src="https://github.com/user-attachments/assets/d837dee0-2612-4711-a740-da35c8f3c54a" />
 
