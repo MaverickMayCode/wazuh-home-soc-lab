@@ -197,3 +197,5 @@ Started Suricata and added it's logs file to our Wazuh config.
 ## Alert Details in Wazuh - Continued
 
 <img width="960" height="932" alt="detail2" src="https://github.com/user-attachments/assets/05a78fc2-9f54-418a-b939-183d4e2ad942" />
+
+---
