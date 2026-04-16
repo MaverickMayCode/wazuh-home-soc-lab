@@ -173,6 +173,10 @@ Network Login attempt from Kali ATTACKER: smbclient -L //192.168.4.22 -U fakeuse
 ---
 ## 💻 Simulation 6: Nmap Scan - Kali ATTACKER - Suricata Added to Wazuh
 
+### Description
+
+- Ran a basic network scan that searches for exposed services/ports on a Windows endpoint
+
 Not all of our simulations on our Windows endpoint generated logs that Wazuh could
 use to alert us of potential malicious activity. The biggest gap I noticed was when
 running my first nmap scan. The nmap scan gained so much important data for an ATTACKER
@@ -193,6 +197,10 @@ log generation and more full fledge SIEM detection. Our answer? Suricata.
   
 Started Suricata and added it's logs file to our Wazuh config.
 
+### Commands Used
+
+Nmap Scan: nmap -sS -T4 192.168.4.22
+
 ## Ran Basic Nmap Scan
 
 <img width="681" height="541" alt="kalinmap" src="https://github.com/user-attachments/assets/c64051f3-5efe-46fe-bf15-b21b88faeefc" />
@@ -208,6 +216,13 @@ Started Suricata and added it's logs file to our Wazuh config.
 ## Alert Details in Wazuh - Continued
 
 <img width="960" height="932" alt="detail2" src="https://github.com/user-attachments/assets/05a78fc2-9f54-418a-b939-183d4e2ad942" />
+
+## Outcome
+
+- Wazuh generated alerts for:
+  - The nmap scan executed by the Kali ATTACKER showed how adding suricata to our workflow closes the gap in log generation certain endpoint operating systems can have - like our Windows endpoint
+- ATTACKER gained:
+  - Insight into the vunerable ports on our Windows endpoint
 
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
