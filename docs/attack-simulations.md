@@ -178,7 +178,8 @@ log generation and more full fledge SIEM detection. Our answer? Suricata.
 
 <img width="750" height="358" alt="install" src="https://github.com/user-attachments/assets/6356e015-5d23-49de-9444-7b11ad304fec" />
 
-- to install suricata onto our Wazuh VM (Ubuntu). Then ran a quick verification command to check that it was correctly installed: suricata --version.
+- to install suricata onto our Wazuh VM (Ubuntu)
+- Then ran a quick verification command to check that it was correctly installed: suricata --version
   
 Started Suricata and added it's logs file to our Wazuh config.
 
