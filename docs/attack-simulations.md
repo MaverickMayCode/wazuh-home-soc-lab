@@ -1,7 +1,7 @@
 # Event Simulations
 See ["incident-reports.md"](https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md) for incident reports.
 
-## 🔑 Simulation Index
+## 🔑 Simulation Index 
 
 - [💻 Simulation 1: Failed Authentication Attempts](#-simulation-1-failed-authentication-attempts)
 - [💻 Simulation 2: Successful Account Creation](#-simulation-2-successful-account-creation)
