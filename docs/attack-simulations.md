@@ -164,7 +164,7 @@ Network Login attempt from Kali ATTACKER: smbclient -L //192.168.4.22 -U fakeuse
 ## 💻 Simulation 6: Nmap Scan - Kali ATTACKER - Suricata Added to Wazuh
 
 Not all of our simulations on our Windows endpoint generated logs that Wazuh could
-use to alert of potential malicious activity. The biggest gap I noticed was when
+use to alert us of potential malicious activity. The biggest gap I noticed was when
 running my first nmap scan. The nmap scan gained so much important data for an ATTACKER
 like: which ports were open and vulnerable, and which ports the attacker could get to
 respond, but our endpoint never generated logs for those instances. We need a middle-man for our endpoint that can bridge the gap between simple
