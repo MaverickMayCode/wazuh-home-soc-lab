@@ -12,6 +12,7 @@ Simulate security events to test SIEM detection capabilities.
 - [💻 Simulation 3: Successful Privilege Escalation](#-simulation-3-successful-privilege-escalation)
 - [💻 Simulation 4: Baisc Low-Level Nmap Scan - Kali ATTACKER](#-simulation-4-baisc-low-level-nmap-scan---kali-attacker)
 - [💻 Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER](#-simulation-5-network-login-attempt-smb---kali-attacker)
+- [💻 Simulation 6: Nmap Scan - Kali ATTACKER - Suricata Added to Wazuh](#-simulation-6-nmap-scan---kali-attacker---suricata-added-to-wazuh)
 
 ---
 
