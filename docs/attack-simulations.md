@@ -1,6 +1,10 @@
 # Event Simulations
 See ["incident-reports.md"](https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md) for incident reports.
 
+## Objective
+Simulate security events to test SIEM detection capabilities.
+
+
 ## 🔑 Simulation Index 
 
 - [💻 Simulation 1: Failed Authentication Attempts](#-simulation-1-failed-authentication-attempts)
@@ -8,9 +12,6 @@ See ["incident-reports.md"](https://github.com/MaverickMayCode/wazuh-home-soc-la
 - [💻 Simulation 3: Successful Privilege Escalation](#-simulation-3-successful-privilege-escalation)
 - [💻 Simulation 4: Baisc Low-Level Nmap Scan - Kali ATTACKER](#-simulation-4-baisc-low-level-nmap-scan---kali-attacker)
 - [💻 Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER](#-simulation-5-network-login-attempt-smb---kali-attacker)
-
-## Objective
-Simulate security events to test SIEM detection capabilities.
 
 ---
 
@@ -56,6 +57,8 @@ Create user: net user testuser Password123! /add
 - Wazuh generated alerts for:
   - Account creation
 
+---
+
 ## 💻 Simulation 3: Successful Privilege Escalation
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
@@ -84,6 +87,8 @@ Add to admin group: net localgroup administrators testuser /add
 - Wazuh generated alerts for:
   - Successful privilege escalation activity
 
+---
+
 ## 💻 Simulation 4: Baisc Low-Level Nmap Scan - Kali ATTACKER
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
@@ -106,6 +111,8 @@ Nmap Scan from Kali ATTACKER: nmap -sS 192.168.4.22
 - ATTACKER gained:
   - Insight into the vunerable ports on our Windows endpoint
  
+---
+
 ## 💻 Simulation 5: Network Login Attempt (SMB) - Kali ATTACKER
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
