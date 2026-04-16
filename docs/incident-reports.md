@@ -24,7 +24,7 @@ MITRE Technique: T1110 (Brute Force)
 
 ## Analysis
 
-The SIEM identified a pattern of repeated failed authentication attempts, indicating potential brute-force activity.
+Wazuh identified a pattern of repeated failed authentication attempts, indicating potential brute-force activity.
 
 ## Conclusion
 
@@ -53,7 +53,7 @@ Ran successful user creation commands being executed on a Windows endpoint to te
 
 ## Analysis
 
-The SIEM identified a user account and it's process of being created.
+Wazuh identified a user account and it's process of being created.
 
 ## Conclusion
 
@@ -76,7 +76,7 @@ Executed successful privilege escalation commands on a Windows endpoint to test 
 
 ## Analysis
 
-The SIEM identified a user account escalating its privileges to admin.
+Wazuh identified a user account escalating its privileges to admin.
 
 ## Conclusion
 
@@ -100,7 +100,7 @@ Used my Kali ATTACKER VM to run a basic Nmap scan of a Windows endpoint to test 
 
 ## Analysis
 
-The SIEM did not identify the event which shows the importance of closely monitoring port access especially for endpoints that don't generate logs for such attacks.
+Wazuh did not identify the event which shows the importance of closely monitoring port access especially for endpoints that don't generate logs for such attacks.
 - Potential bad actors could use these open ports to attack the network and/or gain unrestricted access if not carefully monitored
 
 ## Conclusion
@@ -134,7 +134,7 @@ MITRE Technique: T1110 (Brute Force)
 
 ## Analysis
 
-The SIEM identified a pattern of repeated failed authentication attempts into our Windows endpoint SMB service, indicating potential brute-force activity.
+Wazuh identified a pattern of repeated failed authentication attempts into our Windows endpoint SMB service, indicating potential brute-force activity.
 
 ## Conclusion
 
