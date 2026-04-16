@@ -186,14 +186,14 @@ Started Suricata and added it's logs file to our Wazuh config
 
 <img width="681" height="541" alt="kalinmap" src="https://github.com/user-attachments/assets/c64051f3-5efe-46fe-bf15-b21b88faeefc" />
 
-Alerts Generated in Wazuh
+## Alerts Generated in Wazuh
 
 <img width="766" height="148" alt="logs" src="https://github.com/user-attachments/assets/d2c07840-27c8-49f7-aa1e-ec838ed74f7d" />
 
-Alert Details in Wazuh
+## Alert Details in Wazuh
 
 <img width="868" height="888" alt="detail1" src="https://github.com/user-attachments/assets/e24fc0b7-fb3e-4516-ba6b-1dc86e085d8d" />
 
-Alert Details in Wazuh - Continued
+## Alert Details in Wazuh - Continued
 
 <img width="960" height="932" alt="detail2" src="https://github.com/user-attachments/assets/05a78fc2-9f54-418a-b939-183d4e2ad942" />
