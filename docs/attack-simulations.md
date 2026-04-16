@@ -32,6 +32,8 @@ Simulate security events to test SIEM detection capabilities.
 ## Alerts Generated in Wazuh
 
 <img width="1870" height="924" alt="04055a2a-553b-4248-97db-48d2f8747eb9" src="https://github.com/user-attachments/assets/4ed352e2-962b-41b7-9e55-0ea8fdc01d5f" />
+ 
+---
 
 ## 💻 Simulation 2: Successful Account Creation
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
