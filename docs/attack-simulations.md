@@ -22,7 +22,12 @@ Simulate security events to test SIEM detection capabilities.
 - Generated multiple failed login attempts
 - Simulates credential abuse / brute force behavior
 
+## Login Attempts
+
 <img width="974" height="504" alt="70645b3c-3f2f-44a6-a3af-b1076873f5f5" src="https://github.com/user-attachments/assets/20d60959-f692-4569-91f7-f51de71192f9" />
+
+## Alerts Generated in Wazuh
+
 <img width="1870" height="924" alt="04055a2a-553b-4248-97db-48d2f8747eb9" src="https://github.com/user-attachments/assets/4ed352e2-962b-41b7-9e55-0ea8fdc01d5f" />
 
 ## 💻 Simulation 2: Successful Account Creation
@@ -36,7 +41,12 @@ Create user: net user testuser Password123! /add
 
 - Simulates successful authorized account creation
 
+## Test
+
 <img width="855" height="169" alt="561cf6ed-2bf5-4c06-9c13-1c7f867e6bc9" src="https://github.com/user-attachments/assets/aaf08687-1adf-42d8-bf45-60c01a274690" />
+
+## Test
+
 <img width="1859" height="369" alt="0975720f-5449-4d6b-854b-3640bf6e774a" src="https://github.com/user-attachments/assets/7bdcb7b6-72d2-4795-b7bf-4f3cc291bf4d" />
 
 ## Outcome
