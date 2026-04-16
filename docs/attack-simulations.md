@@ -12,6 +12,8 @@ See ["incident-reports.md"](https://github.com/MaverickMayCode/wazuh-home-soc-la
 ## Objective
 Simulate security events to test SIEM detection capabilities.
 
+---
+
 ## 💻 Simulation 1: Failed Authentication Attempts
 - Incident Report: https://github.com/MaverickMayCode/wazuh-home-soc-lab/blob/main/docs/incident-reports.md
 
