@@ -159,5 +159,5 @@ Network Login attempt from Kali ATTACKER: smbclient -L //192.168.4.22 -U fakeuse
   - Identified that SMB (port 445) is active and responding
   - Determined the attempted username was invalid or incorrect
 
-
+---
 
