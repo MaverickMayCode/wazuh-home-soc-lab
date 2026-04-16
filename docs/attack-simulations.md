@@ -93,6 +93,8 @@ Nmap Scan from Kali ATTACKER: nmap -sS 192.168.4.22
 
 - Ran a basic network scan that searches for exposed services/ports on a Windows endpoint
 
+## Nmap Scan
+
 <img width="1100" height="697" alt="ab8fe2eb-1d69-430c-96db-f06157489c85" src="https://github.com/user-attachments/assets/bab8aecb-977c-4e9d-a2c7-81f26cce9ca7" />
 
 ## Outcome
