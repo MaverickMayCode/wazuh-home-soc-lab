@@ -164,47 +164,34 @@ Network Login attempt from Kali ATTACKER: smbclient -L //192.168.4.22 -U fakeuse
 
 Not all of our simulations on our Windows endpoint generated logs that Wazuh could
 use to alert use of potential malicious activity. The biggest gap I noticed was when
-running my first nmap scan. The nmap scan gained so much important data for the attacker
-like: which ports were open and vulnerable and which ports the attacker could get to
+running my first nmap scan. The nmap scan gained so much important data for an ATTACKER
+like: which ports were open and vulnerable, and which ports the attacker could get to
 respond. We need a middle-man for our endpoint that can bridge the gap between simple
 log generation and more full fledge SIEM detection. Our answer? Suricata. 
 
-1. First, we ran "sudo apt update" and 2. "sudo apt install suricata -y" to install suricata
-onto our Wazuh VM (Ubuntu). Then ran a quick verification command to check that it was
-correctly installed: suricata --version. 
-
-Found network interface: ip a
-see enp0s3
-"sudo nano /etc/suricata/suricata.yaml"
-find af-packet:
-find - interface: etho0
-change to - interface: enp0s3
-Ctrl + O to save
-Ctrl + X to exit
-
-ran sudo suricata-update
-sudo systemctl enable suricata
-sudo systemctl start suricata
-sudo systemctl status suricata
-
-watching logs - 
-cd /var/log/suricata
-ls
-looking for eve.json
-watch live: sudo tail -f eve.json
--viewed live raw log generation
-
-adding suricata to wazuh
-ran nmap
+## First, we ran "sudo apt update" 
 
 <img width="492" height="270" alt="update" src="https://github.com/user-attachments/assets/e256009a-7fe5-4932-b42f-b19da0db98a0" />
 
+## and then "sudo apt install suricata -y" 
+- to install suricata onto our Wazuh VM (Ubuntu). Then ran a quick verification command to check that it was correctly installed: suricata --version. 
+
 <img width="750" height="358" alt="install" src="https://github.com/user-attachments/assets/6356e015-5d23-49de-9444-7b11ad304fec" />
+
+Started Suricata and added it's logs file to our Wazuh config
+
+## Ran Basic Nmap Scan
 
 <img width="681" height="541" alt="kalinmap" src="https://github.com/user-attachments/assets/c64051f3-5efe-46fe-bf15-b21b88faeefc" />
 
+Alerts Generated in Wazuh
+
 <img width="766" height="148" alt="logs" src="https://github.com/user-attachments/assets/d2c07840-27c8-49f7-aa1e-ec838ed74f7d" />
 
+Alert Details in Wazuh
+
 <img width="868" height="888" alt="detail1" src="https://github.com/user-attachments/assets/e24fc0b7-fb3e-4516-ba6b-1dc86e085d8d" />
+
+Alert Details in Wazuh - Continued
 
 <img width="960" height="932" alt="detail2" src="https://github.com/user-attachments/assets/05a78fc2-9f54-418a-b939-183d4e2ad942" />
