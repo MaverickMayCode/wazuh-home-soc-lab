@@ -93,7 +93,7 @@ Network Login attempt from Kali ATTACKER: smbclient -L //192.168.4.22 -U fakeuse
 
 ### Description
 
-- Kali ATTACKER used the command listed to attempt to log in to the SMB service on our windows endpoint
+- Kali ATTACKER used the command listed to attempt to log in to the SMB service on our Windows endpoint
 
 ### Single Attempt from Kali ATTACKER
 
