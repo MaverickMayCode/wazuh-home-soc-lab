@@ -22,4 +22,4 @@ This project is meant to demonstrate hands-on experience with SIEM deployment, l
 - Suricata (IDS)
 
 ## Project Status
-- In Progress – Finishing touches. Six simulations run with Ubuntu server hosting Wazuh using a Windows 10 agent (my PC) to safely ingest logs.
+- Finishing touches - Six simulations run with Ubuntu server hosting Wazuh using a Windows 10 agent (my PC) to safely ingest logs.
