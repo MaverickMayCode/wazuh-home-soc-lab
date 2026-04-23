@@ -15,10 +15,11 @@ This project is meant to demonstrate hands-on experience with SIEM deployment, l
 - Investigate alerts and write incident reports
 
 ## Tools Used
-- Wazuh (SIEM/XDR)
+- Wazuh (SIEM)
 - Ubuntu Server
 - Kali Linux
 - VirtualBox
+- Suricata (IDS)
 
 ## Project Status
-- In Progress – Initial lab setup complete. Three simulations run with Ubuntu server hosting Wazuh using a Windows 10 agent (my PC) to safely ingest logs.
+- In Progress – Finishing touches. Six simulations run with Ubuntu server hosting Wazuh using a Windows 10 agent (my PC) to safely ingest logs.
